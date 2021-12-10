@@ -1,6 +1,8 @@
-pipeline { 
+pipeline {
     agent any
-    stages{
-        
-    } 
+    stages {
+        stage {
+            echo 'first stage' 
+        }
+    }
 }
