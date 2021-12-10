@@ -6,5 +6,10 @@ pipeline {
                 println "Started stage A"
             }
         }
+        stage("B") {
+            steps {
+                println "Started stage B"
+            }
+        }
     }
 }
