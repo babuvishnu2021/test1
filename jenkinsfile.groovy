@@ -6,7 +6,7 @@ pipeline {
                 println "Started stage A"
                 script {
                     println '1st method'
-                    100.times {print it % 2 == 0?it:''}
+                    100.times {print it % 2 !== 0?it:''}
                     println ''
                     println '--------------------'
                     
