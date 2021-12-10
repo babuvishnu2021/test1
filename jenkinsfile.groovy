@@ -5,19 +5,12 @@ pipeline {
             steps {
                 println "Started stage A"
                 script {
-                  (1..20).findAll{it in ODD}
-                  (1..20).each{
-                    switch(it) {
-                      case EVEN:
-                        println "${it} is even"
-                        break
-                      case ODD:
-                        println "${it} is odd"
-                        break
-                      default:
-                        println "${it} is a mystery to me"
-                    }
-                  }
+                    println '1st method'
+                    10.times {print it % 2 == 0?it:''}
+                    println ''
+                    println '--------------------'
+                    println '2nd method'
+                    0.step(10, 2) { println it }
                 }
             }
         }
